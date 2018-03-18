@@ -18,6 +18,10 @@
     // Don't autodetect the subfolder, but use "" instead, since there is none
     // defined('THEBUGGENIE_PUBLIC_FOLDER_NAME') || define('THEBUGGENIE_PUBLIC_FOLDER_NAME', '');
     // ----
+    function dd()
+    {
+        array_map(function($x) { var_dump($x); }, func_get_args()); die;
+    }
 
     // Include the "engine" script, which initializes and sets up stuff
     defined('THEBUGGENIE_CORE_PATH') || define('THEBUGGENIE_CORE_PATH', THEBUGGENIE_PATH . 'core' . DS);
